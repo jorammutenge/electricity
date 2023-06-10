@@ -20,7 +20,7 @@ X_all, y_all = df_all[FEATURES], df_all[TARGET]
 
 def predict_electricity_price(start_date, end_date):
     # Filter data based on the given date range
-    mask = (df_all['Date'] >= start_date) & (df_all['Date'] <= end_date)
+    mask = (df_all['Time'] >= start_date) & (df_all['Time'] <= end_date)
     X_pred = X_all.loc[mask]
 
     # Make predictions
